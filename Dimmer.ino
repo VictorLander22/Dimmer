@@ -6,15 +6,15 @@
  */
 
 #include <ESP8266WiFi.h>
-#include <Somfy.h>
+// #include <Somfy.h>
 
 #define RF_SENDER 15 // this is where you connected the RF sender data pin
 
-const bool TEST = 0;
-const int MAXTRIES = 5; // how many times should we try to reconnent to host
+// const bool TEST = 0;
+// const int MAXTRIES = 5; // how many times should we try to reconnent to host
 
-Somfy somfy(RF_SENDER, 0xFFFFFFFB); // initial remote id - change this one,  it will be incremented for remotes added afterwards
-                                    //Somfy somfy(0xFFFFFFFB, RF_SENDER); // initial remote id - change this one,  it will be incremented for remotes added afterwards
+//Somfy somfy(RF_SENDER, 0xFFFFFFFB); // initial remote id - change this one,  it will be incremented for remotes added afterwards
+//Somfy somfy(0xFFFFFFFB, RF_SENDER); // initial remote id - change this one,  it will be incremented for remotes added afterwards
 
 void setup()
 {
@@ -31,6 +31,7 @@ void loop()
     String string = Serial.readStringUntil('\n');
   }
 }
+
 //   if (string == "setup")
 //   {
 //     Serial.println("Entrei setup");
